@@ -1,0 +1,200 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: rgb(247, 182, 121);
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  padding: 0.75rem 2rem;
+  font-size: 3rem;
+}
+.header img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem;
+  vertical-align: middle;
+}
+
+.tab {
+  background-color: rgb(255, 123, 0);
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.tab button {
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  color: rgb(255, 123, 0);
+  border-radius: 4px;
+  border: none;
+  margin: 0.5rem;
+  border: 1px solid red;
+}
+.tab button:hover {
+  background-color: rgb(255, 123, 0);
+  color: white;
+
+  transition: 0.5s;
+
+  cursor: pointer;
+}
+
+/* -------styling for all dogs container starts------ */
+
+.content-all {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.content-all::after,
+.content-random::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+
+  background: url("./images/background.jpg");
+
+  background-position: center;
+  background-repeat: repeat;
+  background-blend-mode: screen;
+}
+.content-all div {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  height: 19rem;
+  box-sizing: border-box;
+  margin: 1rem;
+  border-radius: 10px;
+
+  z-index: 10;
+}
+.content-all div:hover {
+  box-shadow: 0 0 10px 5px rgb(255, 123, 0);
+}
+
+.content-all div img {
+  width: 100%;
+  height: 15rem;
+  border-radius: 10px 10px 0 0;
+}
+.content-all div span {
+  padding: 0.5rem 1rem;
+  min-height: 3rem;
+  background-color: rgb(252, 194, 167);
+  color: rgb(255, 123, 0);
+  text-align: center;
+  font-family: fantasy;
+  font-size: 1.2rem;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/* -------styling for all dogs container ends------ */
+
+/* -------styling for a random dog container starts------ */
+
+.content-random {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.content-random button {
+  font-size: 2rem;
+  display: block;
+  border-radius: 4px;
+  width: 10rem;
+  height: 5rem;
+
+  background-color: orange;
+  color: white;
+  border: none;
+  margin: 1rem auto;
+  z-index: 10;
+}
+.content-random button:hover {
+  box-shadow: 0 0 8px 4px rgb(248, 187, 74);
+  transition: 0.4s;
+  cursor: pointer;
+}
+.content-random .random-dis {
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.content-random .random-dis div {
+  width: 20rem;
+  height: 32rem;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.content-random .random-dis div img {
+  width: 100%;
+  height: 80%;
+}
+
+.content-random .random-dis div span {
+  width: 100%;
+  color: rgb(255, 123, 0);
+  font-size: 2rem;
+  font-family: fantasy;
+  text-align: center;
+}
+/* -------styling for a random dog container ends------ */
+
+/* -------media queries--------- */
+
+@media screen and (max-width: 320px) {
+  .content-all {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content-random .random-dis div {
+    width: 16rem;
+    height: 24rem;
+  }
+  .header {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content-all {
+    padding: 1rem 0.5rem;
+  }
+  .content-all div {
+    width: 10rem;
+    max-height: 15rem;
+    margin: 1rem 0.5rem;
+  }
+  .content-all div img {
+    width: 100%;
+    max-height: 12rem;
+    border-radius: 5px 5px 0 0;
+  }
+  .content-all div span {
+    padding: 0.25rem 0.25rem;
+  }
+}
