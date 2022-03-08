@@ -94,8 +94,11 @@ body {
   border-radius: 10px 10px 0 0;
 }
 .content-all div span {
-  padding: 0.5rem 1rem;
-  min-height: 3rem;
+  padding: 0.5rem;
+  display:inline-block;
+  vertical-align:middle;
+  height: 2.5rem;
+  line-height:2.5rem;
   background-color: rgb(252, 194, 167);
   color: rgb(255, 123, 0);
   text-align: center;
@@ -110,7 +113,7 @@ body {
 
 .content-random {
   min-height: 100vh;
-  padding: 2rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -118,16 +121,16 @@ body {
 }
 
 .content-random button {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: block;
   border-radius: 4px;
-  width: 10rem;
-  height: 5rem;
+  width: 8rem;
+  height: 4rem;
 
   background-color: orange;
   color: white;
   border: none;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   z-index: 10;
 }
 .content-random button:hover {
@@ -142,8 +145,8 @@ body {
 }
 
 .content-random .random-dis div {
-  width: 20rem;
-  height: 32rem;
+  width: 18rem;
+  height: 28rem;
   box-sizing: border-box;
   margin: auto;
 }
